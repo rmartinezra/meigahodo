@@ -48,7 +48,15 @@ class G4HodoscopeDetectorConstruction : public G4VUserDetectorConstruction {
 		// solids
 		G4Box* solidWorld = nullptr;
 		G4Box* solidGround = nullptr;
-		G4Box* solidBrick = nullptr;
+		//++++++++++++++++++++++++++++
+		G4Tubs* solidBrick01 = nullptr;//Editando aquì para definir 7 porciones de cilindros en variables solidBrick
+		G4Tubs* solidBrick02 = nullptr;
+		G4Tubs* solidBrick03 = nullptr;
+		G4Tubs* solidBrick04 = nullptr;
+		G4Tubs* solidBrick05 = nullptr;
+		G4Tubs* solidBrick06 = nullptr;
+		G4Tubs* solidBrick07 = nullptr;
+                //++++++++++++++++++++++++++++
 		G4Box* solidBrickI = nullptr;
 		G4Box* solidBrick1 = nullptr;
 		G4Box* solidBrick2 = nullptr;
@@ -65,8 +73,22 @@ class G4HodoscopeDetectorConstruction : public G4VUserDetectorConstruction {
 		G4LogicalVolume* logicGround = nullptr;
 		G4PVPlacement*   physGround  = nullptr;
 
-		G4LogicalVolume* logicBrick = nullptr;
-		G4PVPlacement*   physBrick  = nullptr;
+		//++++++++++++++++++++++++++++++++++++
+		G4LogicalVolume* logicBrick01 = nullptr;// editando aquì para tener 7 porciones en variables logicBrick y physBrick
+		G4PVPlacement*   physBrick01  = nullptr;
+		G4LogicalVolume* logicBrick02 = nullptr;
+		G4PVPlacement*   physBrick02  = nullptr;
+                G4LogicalVolume* logicBrick03 = nullptr;
+                G4PVPlacement*   physBrick03  = nullptr;
+		G4LogicalVolume* logicBrick04 = nullptr;
+                G4PVPlacement*   physBrick04  = nullptr;
+		G4LogicalVolume* logicBrick05 = nullptr;
+                G4PVPlacement*   physBrick05  = nullptr;
+		G4LogicalVolume* logicBrick06 = nullptr;
+                G4PVPlacement*   physBrick06  = nullptr;
+		G4LogicalVolume* logicBrick07 = nullptr;
+                G4PVPlacement*   physBrick07  = nullptr;
+                //++++++++++++++++++++++++++++++++++++
 
 		G4LogicalVolume* logicBrickI = nullptr;
                 G4PVPlacement*   physBrickI  = nullptr;
