@@ -276,6 +276,7 @@ G4Element* Materials::elFe;
 G4Element* Materials::elAl;
 G4Element* Materials::elPb;
 G4Element* Materials::elCl;
+G4Element* Materials::elMn;//ruta agregada para el Manganeso - componente del acero
 
 
 
@@ -289,6 +290,7 @@ G4Material* Materials::Polystyrene;
 
 // Materials
 G4Material* Materials::Air;
+G4Material* Materials::Steel;//ruta agregada para material acero
 G4Material* Materials::Water;
 G4Material* Materials::Salt;
 G4Material* Materials::SaltyWater;
@@ -364,7 +366,7 @@ Materials::CreateElements()
 	elAl = new G4Element("Aluminium", "Al", 13, 26.98 * g/mole);
 	elPb = new G4Element("Lead", "Pb", 82, 207.2 * g/mole);
 	elCl = new G4Element("Clhorine", "Cl", 17, 70.906 * g/mole);
-
+        elMn = new G4Element("Manganese", "Mn", 25, 54.938 * g/mole);// definienco Mn - componente de acero
 }
 
 void
@@ -445,6 +447,14 @@ Materials::CreateMaterials()
 	Air = new G4Material("Air", 1.29e-3 * g/cm3, 2);
 	Air->AddElement(elN, 0.7);
 	Air->AddElement(elO, 0.3);
+        // --------------------------------------------------------------------
+        // Steel                                                                // ruta agregada para definir acero
+        // --------------------------------------------------------------------
+        Steel = new G4Material("Steel", 7.7 * g/cm3, 3);
+        Steel->AddElement(elFe, 0.97);
+        Steel->AddElement(elC, 0.02);
+	Steel->AddElement(elMn, 0.01);
+
 	// --------------------------------------------------------------------
 	// Water
 	// --------------------------------------------------------------------

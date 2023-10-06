@@ -36,6 +36,7 @@ public:
 	static G4Element* elAl;
 	static G4Element* elPb;
 	static G4Element* elCl;
+	static G4Element* elMn;// declarando elemento Mn
 	static G4Element* C;
 	static G4Element* H;	
 	// compounds
@@ -50,6 +51,7 @@ public:
 	static G4Material* Iron;
 	// Materials
 	static G4Material* Air;
+	static G4Material* Steel;// declarando material acero
 	static G4Material* Water;
 	static G4Material* Salt;
 	static G4Material* StdRock;
